@@ -4,9 +4,13 @@ body, html {
 }
 
 .container {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: repeat(2, 1fr) 5fr 1fr;
+  gap: 15px;
   text-align: center;
   height: 100%;
-  padding: 16px;
+  padding: 8px;
   box-sizing: border-box;
 }
 
@@ -31,10 +35,13 @@ body, html {
 
 .nav {
   background-color: #00DDFF;
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
 }
 
 .article {
   background-color: #bccbde;
+  grid-area: 3 / 2 / 4 / 3;
 }
 
 .article p {
